@@ -7,7 +7,6 @@ class Object:
         cv.NamedWindow("Object", 1)
 
     def run(self):
-        # Capture first frame to get size
         frame = cv.QueryFrame(self.capture)
         frame_size = cv.GetSize(frame)
         grey_image = cv.CreateImage(cv.GetSize(frame), cv.IPL_DEPTH_8U, 1)
@@ -18,8 +17,6 @@ class Object:
         while True:
             # Capture frame from webcam
             color_image = cv.QueryFrame(self.capture)
-
-            # Smooth to get rid of false positives
             cv.Smooth(color_image, color_image, cv.CV_GAUSSIAN, 3, 0)
 
             if not diff:
