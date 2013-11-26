@@ -1,0 +1,27 @@
+Extending Project:
+
+1. Time Lapse and Video Recording via Manual, Auto or 
+	Scheduled Time/Timer control Motion Detection.
+ 
+2. Making webcam follow movement/object of interest (PySerial Package).
+
+serial_port = serial.Serial(1) #Opens COM2
+serial_port.write('I') #Initializing 
+x = serial_port.read()
+    
+# Estimating depth and depth uncertainty at each pixel and incrementally 
+refining these estimates over time. Kalman Filter a good choice. 
+Kalman filtering as a viable framework for this problem, because it incorporates 
+representations of uncertainty and provides a mechanism for incrementally reducing 
+uncertainty over time
+  
+# Finding Movement to Right or Left
+# Resetting Camera Angle
+
+
+3. Reserve Memory Disk Space
+
+4. Implement a field range of interest
+
+5. Applying this code to various environments to get better idea of threshold
+     which is related to sensitivity of detecting motion
